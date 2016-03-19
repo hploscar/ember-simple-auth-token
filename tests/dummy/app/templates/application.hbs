@@ -1,0 +1,37 @@
+<h2 id="title">Demo: ember-simple-auth-token</h2>
+
+<ul>
+  {{#link-to 'index' tagName='li'}}
+    <a style="cursor: pointer">Protected Page</a>
+  {{/link-to}}
+  {{#if session.isAuthenticated}}
+    <li>
+      <a {{ action 'invalidateSession' }}>Logout</a>
+    </li>
+  {{else}}
+    {{#link-to 'login' tagName='li'}}
+      <a style="cursor: pointer">Login</a>
+    {{/link-to}}
+  {{/if}}
+</ul>
+
+{{outlet}}
+
+<hr>
+
+<p>Settings</p>
+<pre>
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: '/api/token-auth/',
+    serverTokenRefreshEndpoint: '/api/token-refresh/',
+    timeFactor: 1000,
+    refreshLeeway: 5
+  };
+</pre>
+
+<p>Session Contents:</p>
+<pre>{{sessionData}}</pre>
+
+<p>Token Contents:</p>
+<pre>{{tokenData}}</pre>
+

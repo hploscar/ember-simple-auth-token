@@ -173,5 +173,4 @@ export default {
     @private
   */
   load: loadConfig(defaults)
-
 };

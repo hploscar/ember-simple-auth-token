@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpadilla/ember-simple-auth-token.git"
+    "url": "git+https://github.com/hploscar/ember-simple-auth-token.git"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -85,7 +85,7 @@
   "bugs": {
     "url": "https://github.com/jpadilla/ember-simple-auth-token/issues"
   },
-  "homepage": "https://github.com/jpadilla/ember-simple-auth-token#readme",
+  "homepage": "https://github.com/hploscar/ember-simple-auth-token#readme",
   "_id": "ember-simple-auth-token@1.0.0",
   "_shasum": "a74a9ac548add8c0a6fb5927319079e3cc6e32ed",
   "_from": "git+ssh://git@github.com/hploscar/ember-simple-auth-token.git#ceecd811f4d2b75a2ab727800e73f0065e2fcfda",

@@ -166,6 +166,7 @@ export default TokenAuthenticator.extend({
                                  otherwise
   */
   authenticate(credentials, headers) {
+
     return new Ember.RSVP.Promise((resolve, reject) => {
       const data = this.getAuthenticateData(credentials);
 
