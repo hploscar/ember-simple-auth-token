@@ -108,6 +108,7 @@ export default TokenAuthenticator.extend({
                                  in the session being authenticated
   */
   restore(data) {
+
     const dataObject = Ember.Object.create(data);
 
     return new Ember.RSVP.Promise((resolve, reject) => {
@@ -169,7 +170,6 @@ export default TokenAuthenticator.extend({
 
     return new Ember.RSVP.Promise((resolve, reject) => {
       const data = this.getAuthenticateData(credentials);
-
       this.makeRequest(this.serverTokenEndpoint, data, headers).then(response => {
         Ember.run(() => {
           const token = Ember.get(response, this.tokenPropertyName);
@@ -320,7 +320,7 @@ export default TokenAuthenticator.extend({
   },
 
   getCurrentTime() {
-    return (new Date()).getTime();
+    return (new Date()).getTime()/1000;
   },
 
   /**
